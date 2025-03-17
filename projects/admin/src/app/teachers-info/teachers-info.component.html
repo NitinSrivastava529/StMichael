@@ -1,0 +1,102 @@
+<h2 class="page-heading">Manage Teachers Detail
+    <hr />
+</h2>
+<div class="page-box">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Add Teacher Details
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-3 form-group">
+                            <label>Teacher Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" [(ngModel)]="dataInfo.Name"
+                                placeholder="Teacher Name" />
+                        </div>
+                        <div class="col-md-3 form-group">
+                            <label>Designation<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" [(ngModel)]="dataInfo.Designation"
+                                placeholder="Designation" />
+                        </div>
+                        <div class="col-md-3 form-group">
+                            <label>Qualification<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" [(ngModel)]="dataInfo.Qualification"
+                                placeholder="Qualification" />
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label>DOB<span class="text-danger">*</span></label>
+                            <input type="date" class="form-control" [(ngModel)]="dataInfo.DOB"/>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label>DOA<span class="text-danger">*</span></label>
+                            <input type="date" class="form-control" [(ngModel)]="dataInfo.DOA"/>
+                        </div>
+                        <div class="col-md-3 form-group">
+                            <label>Trained/Un-Trained<span class="text-danger">*</span></label>
+                            <select class="form-control" [(ngModel)]="dataInfo.Trained">                              
+                                <option>Trained</option>
+                                <option>Un-Trained</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 form-group">
+                            <label>Probation<span class="text-danger">*</span></label>
+                            <div class="flex">
+                            <select class="form-control" [(ngModel)]="dataInfo.Probation">
+                                <option>Probation</option>
+                                <option>Contract</option>
+                                <option>Confirmed</option>                              
+                            </select>
+                            <button class="btn btn-success btn-sm" (click)="InsertTeachersInfo()" style="margin-left:8px"><i class="fa fa-sign-in">&nbsp;</i>Save</button>
+                        </div>
+                        </div>                      
+                        <div class="col-md-12 form-group">
+                            <div class="flex">
+                                <h4 class="text-center ws-title pull-left text-danger" style="width:70%;">
+                                    Teachers Record
+                                </h4>
+                                <input type="text" class="form-control pull-right" style="width:24%;"
+                                    placeholder="Search...." id="txtSearch" />
+                            </div>
+                            <div class="scroll">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th style="width:1%;">SR.No.</th>
+                                            <th>Name</th>
+                                            <th>Designation</th>
+                                            <th>Qualification</th>
+                                            <th>DOB</th>
+                                            <th>DOA</th>
+                                            <th>DOA</th>
+                                            <th>Trained/Un-Trained</th>
+                                            <th>Probation</th>
+                                            <th style="width:1%;">CMD</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let val of dataList;let i=index">
+                                            <td>{{i+1}}</td>
+                                            <td>{{val.Name}}</td>
+                                            <td>{{val.Designation}}</td>
+                                            <td>{{val.Qualification}}</td>
+                                            <td>{{val.DOB}}</td>                                        
+                                            <td>{{val.DOA}}</td>                                        
+                                            <td>{{val.Trained}}</td>                                        
+                                            <td>{{val.Probation}}</td>                                        
+                                            <td>{{val.cr_date.substring(0,10)}}</td>
+                                            <td><button (click)="DeleteTeacher(val.AutoId )" class="btn btn-danger btn-xs"><i
+                                                        class='fa fa-trash'></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

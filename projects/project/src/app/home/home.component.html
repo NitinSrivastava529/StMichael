@@ -1,0 +1,252 @@
+<div id="rs-slider" class="slider-overlay-2">
+    <div id="home-slider">
+        <!-- Item 1 -->
+        <div class="item active">
+            <img src="../assets/slider/banner1.jpeg" alt="Slide1" />
+            <div class="slide-content">
+                <div class="display-table">
+                    <div class="display-table-cell">
+                        <div class="container text-center">
+                            <h1 class="slider-title" data-animation-in="fadeInLeft" data-animation-out="animate-out">
+                                Welcome to <span class="text-theme-colored2">St. Michael's School.</span></h1>
+                            <p data-animation-in="fadeInUp" data-animation-out="animate-out" class="slider-desc">
+                                St. Michael's School, Amgaon has been established with the clear vision to educate
+                                and infuse excellent.
+                            </p>
+                            <a routerLink="about" class="sl-readmore-btn mr-30" data-animation-in="lightSpeedIn"
+                                data-animation-out="animate-out">READ MORE</a>
+                            <a routerLink="admission" class="sl-get-started-btn" data-animation-in="lightSpeedIn"
+                                data-animation-out="animate-out">GET Addmission NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Item 2 -->
+        <div class="item">
+            <img src="../assets/slider/banner2.jpeg" alt="Slide1" />
+            <div class="slide-content">
+                <div class="display-table">
+                    <div class="display-table-cell">
+                        <div class="container text-center">
+                            <h1 class="slider-title" data-animation-in="fadeInUp" data-animation-out="animate-out">We
+                                Have <span class="text-theme-colored2">OUTSTANDING FACULTY</span></h1>
+                            <p data-animation-in="fadeInUp" data-animation-out="animate-out" class="slider-desc">
+                                Teachers at St. Michael's School, Amgaon has are not only committed to effective
+                                classroom
+                                teaching but they go beyond..
+                            </p>
+                            <a routerLink="about" class="sl-readmore-btn mr-30" data-animation-in="lightSpeedIn"
+                                data-animation-out="animate-out">READ MORE</a>
+                            <a routerLink="admission" class="sl-get-started-btn" data-animation-in="lightSpeedIn"
+                                data-animation-out="animate-out">GET Addmission NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Item 3 -->
+        <div class="item">
+            <img src="../assets/slider/banner3.jpeg" alt="Slide1" />
+            <div class="slide-content">
+                <div class="display-table">
+                    <div class="display-table-cell">
+                        <div class="container text-center">
+                            <h1 class="slider-title" data-animation-in="fadeInUp" data-animation-out="animate-out">We
+                                Provide <span class="text-theme-colored2">PRECISE CURRICULUM</span></h1>
+                            <p data-animation-in="fadeInUp" data-animation-out="animate-out" class="slider-desc">
+                                St. Michael's School, Amgaon has follows the syllabus as prescribed by the Govt.
+                                It will be our
+                                constant..
+                            </p>
+                            <a routerLink="about" class="sl-readmore-btn mr-30" data-animation-in="lightSpeedIn"
+                                data-animation-out="animate-out">READ MORE</a>
+                            <a routerLink="admission" class="sl-get-started-btn" data-animation-in="lightSpeedIn"
+                                data-animation-out="animate-out">GET Addmission NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Slider Area End -->
+<!-- Services Start -->
+<div class="rs-services rs-services-style1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="services-item rs-animation-hover">
+                    <div class="services-icon">
+                        <i class="fa fa-american-sign-language-interpreting rs-animation-scale-up"></i>
+                    </div>
+                    <div class="services-desc">
+                        <h4 class="text-theme-colored2">Online Addmission</h4>
+                        <p>We are Providing Awesome online Addmission Facility.So What are you waiting for..</p><br />
+                        <a routerLink="admission" class="btn-custom">Go To Addmission</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="services-item rs-animation-hover">
+                    <div class="services-icon">
+                        <i class="fa fa-book rs-animation-scale-up"></i>
+                    </div>
+                    <div class="services-desc">
+                        <h4 class="text-theme-colored2">Our Faculty</h4>
+                        <p>We Have Brilliant Faculty and Educated Teachers in Our College..</p><br />
+                        <a routerLink="faculty" class="btn-custom">Go To Faculty</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="services-item rs-animation-hover">
+                    <div class="services-icon">
+                        <i class="fa fa-graduation-cap rs-animation-scale-up"></i>
+                    </div>
+                    <div class="services-desc">
+                        <h4 class="text-theme-colored2">Our Toppers</h4>
+                        <p>Our School has given a lot of toppers to society, change career and future with us..
+                            Facility.</p><br />
+                        <a routerLink="toppers" class="btn-custom">Go To Toppers</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="rs-about" class="rs-about sec-spacer">
+    <div class="container">    
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <div class="about-img rs-animation-hover">
+                    <img src="../../assets/img/newsevents.jpg" alt="img02" />
+                    <div class="overly-border"></div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="about-desc">
+                    <marquee direction="up" behavior="scroll" style="height: 300px;" loop="" scrollAmount="3">
+                   <ul class="newsList" style="list-style: circle;">
+                    <li *ngFor="let val of NewsInfo">
+                        <div class="news">
+                        <h3>{{val.Heading}}</h3>
+                        <p>{{val.Description}}</p>                        
+                        <a href="{{baseUrl+'UploadFile/News/'+val.file_path}}" target="_blank" class="btn btn-warning btn-xs">View/Download</a>
+                        <label class="pull-right">Date : {{val.cr_date}}</label>
+                    </div>
+                    </li>                
+                    </ul>
+                </marquee>
+                </div>              
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About Us Start -->
+<div id="rs-about" class="rs-about sec-spacer">
+    <div class="container">
+        <div class="sec-title mb-50 text-center">
+            <h2>Welcome to <span class="text-theme-colored">St. Michael's School.</span></h2>
+            <p>
+                Recognized by Government of Uttar Pradesh
+
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <div class="about-img rs-animation-hover">
+                    <img src="../../assets/img/college.jpeg" alt="img02" />
+                    <div class="overly-border"></div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="about-desc">
+                    <p>
+                       <b style="color: brown;"> St. Michael's School</b> is a co-educational institution established in 
+                        the year 2011 with a vision to import integrated education with quality 
+                        and value to student form all parts blending with the modern concept in
+                         education to develop the total personality and to improve their self 
+                         confidence and initiatives.<b style="color: brown;">OPS</b> prepares the childeren to face the challenges 
+                         of living and working in the modern world. <b style="color: brown;">OPS</b> isrunning under the aegis of 
+                         <b style="color: brown;"> JAI MAA SHARDA SEWA SAMITI </b> and is Affiliated to U.P. State Government. 
+                    </p>
+                </div>
+                <div id="accordion" class="rs-accordion-style1">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h3 class="acdn-title" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                Our Mission
+                            </h3>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                            data-parent="#accordion">
+                            <div class="card-body">
+                                We Create a safe and Welcoming Learning environment that encourages Creativity, Curiously, and Collaboration.
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="card">
+                        <div class="card-header mb-0" id="headingThree">
+                            <h3 class="acdn-title collapsed" data-toggle="collapse" data-target="#collapseThree"
+                                aria-expanded="false" aria-controls="collapseThree">
+                                Our Vision
+                            </h3>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                            data-parent="#accordion">
+                            <div class="card-body">
+                                To Provide Quality Education that will enable  our student to be inspired learners and responsible citizens.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="rs-products" class="rs-products sec-spacer" *ngIf="IsGallery">
+    <div class="container">
+        <div class="sec-title mb-50 text-center">
+            <h2>School <span class="text-theme-colored">MEMORABLE MOMENTS</span></h2>
+        </div>
+        <div class="rs-carousel owl-carousel" data-loop="true" data-items="4" data-margin="30" data-autoplay="false"
+            data-autoplay-timeout="5000" data-smart-speed="1200" data-dots="true" data-nav="true" data-nav-speed="false"
+            data-mobile-device="1" data-mobile-device-nav="true" data-mobile-device-dots="true" data-ipad-device="2"
+            data-ipad-device-nav="true" data-ipad-device-dots="true" data-md-device="4" data-md-device-nav="true"
+            data-md-device-dots="true">
+            <div class="product-item" *ngFor="let val of localGalleryList">
+                <div class="product-img">
+                    <a href="#">
+                        <img src="../../assets/img/Gallery/{{val}}" alt="Partner Image" />                       
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="view-btn">
+            <a routerLink="photo-gallery">VIEW ALL</a>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="ModalStartup" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content" id="StartupBody">
+            <div class="col-sm-12" style="background: #ffffffb3;padding: 20px; text-align:center">
+                <img src="../assets/logo/banner.jpeg" class="img-responsive" />
+                <div class="text-center">                
+                    <input type="button" id="d" style="border: none;  background: #005ba5;" data-toggle="modal"
+                        data-target="#ModalStartup" value="Close" class="btn btn-dark btn-flat" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(window).on('load', function () {
+        $('#ModalStartup').modal('show');
+    });
+</script>

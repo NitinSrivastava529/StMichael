@@ -1,0 +1,58 @@
+<h2 class="page-heading">Online Admission
+    <hr />
+</h2>
+<div class="page-box">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Online Admission
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <div class="scroll">
+                                <table class="table table-bordered" id="tblOnlineAdmission">
+                                    <thead>
+                                        <tr>
+                                            <th style="width:1%;">#</th>
+                                            <th>InClass</th>
+                                            <th>Student Name</th>                                          
+                                            <th>Father Name</th>
+                                            <th>Mother Name</th>
+                                            <th>Mobile No</th>
+                                            <th>Email</th>
+                                            <th>Prev. School Name</th>
+                                            <th>Prev. Class Name</th>                                       
+                                            <th>Address</th>
+                                            <th>Date</th>
+                                            <th style="width:1%;">CMD</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let val of AdmissionInfo;let i=index">
+                                            <td>{{i+1}}</td>
+                                            <td>{{val.Class }}</td>
+                                            <td>{{val.StudentName }}</td>
+                                            <td>{{val.FatherName }}</td>                                            
+                                            <td>{{val.MotherName }}</td>
+                                            <td>{{val.Mobile }}</td>
+                                            <td>{{val.Email }}</td>
+                                            <td>{{val.PrevSchoolName }}</td>
+                                            <td>{{val.PrevClassName }}</td>
+                                            <td>{{val.ResAddress }}</td>
+                                            <td>{{val.cr_date }}</td>
+                                            <td><button (click)="DeleteAdmission(val.AutoId )"
+                                                    class="btn btn-danger btn-xs"><i class='fa fa-trash'></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

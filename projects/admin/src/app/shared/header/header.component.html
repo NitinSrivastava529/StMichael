@@ -1,0 +1,52 @@
+<div class="header">
+    <div class="row" style="background:#ffffffed;border-top:10px solid #e91e63;">
+        <div class="col-md-8 left-panel">
+            <h3 class="text-danger">
+                <img [src]="logo" style="width: 148px;margin-top: -15px;" />
+                <span class="text-center"><span class="LoginType" style="text-transform:capitalize"></span></span>
+            </h3>
+        </div>
+        <div class="col-md-4 right-panel">
+            <a href="Dashboard"><i class="fa fa-home"></i></a>
+            <span class="pull-right login-area">
+                <i class="fa fa-user"></i> <span class="user">Welcome To Admin Panel</span>
+                <label class="logout" (click)="logout()"><i class="fa fa-power-off"></i></label>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div id="modalChangePassword" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-sm">
+
+        <!-- Modal content-->
+        <div class="modal-content" style="margin-top:35%;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" style="display: flex;"><i class="fa fa-key">&nbsp;</i>Change Password</h4>
+            </div>
+            <div class="modal-body" style="padding: 12px 30px;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" class="form-control" id="txtPassword" autocomplete="off" maxlength="10"
+                            placeholder="Enter Password" />
+                    </div>
+                    <div class="col-md-12 text-center form-group">
+                        <br />
+                        <button class="btn btn-success" onclick="ChangePassword()">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('.fa-bars').on('click', function () {
+            $('.menu-section').toggle("slide", function () {
+                $('.toggle-bars').show();
+                $('#layout-section').toggleClass('col-md-9');
+            });
+        });
+    });
+</script>

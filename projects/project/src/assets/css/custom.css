@@ -1,0 +1,105 @@
+﻿.notification {
+    margin: 1px 0px 0px;
+    padding: 5px;
+    background: #8b3b3b;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    line-height: 25px;
+}
+#ModalStartup {
+    position: absolute;
+    top: 10%;
+}
+
+#StartupBody {
+    width: fit-content;
+    padding: 68px;
+    background: url(/Content/img/collage.jpeg);
+}
+.head {
+    text-transform: uppercase;
+    color: #ffec09;
+}
+.main-content{
+    color: #000 !important;
+}
+.footer-logo-bg {
+    background: #c1baba;
+    box-shadow: 1px 1px 12px #716868;
+}
+.trip-title {
+    font-size: 20px;
+    margin: 0px !important;
+    text-align: center;
+    color: #ffffff;
+    background: #ec1c55;
+}
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #ccc;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: DodgerBlue;
+}
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: DodgerBlue;
+    }
+
+.head-blue {
+    background: #2540b7 !important;
+    color: #fff !important;
+}
+
+.mobileTab {
+    z-index: 9999;
+    right: 0px;
+    position: fixed;
+    background: #ffccda;
+    top: 40%;
+    box-shadow: 2px 1px 20px #d6daff;
+}
+
+    .mobileTab img {
+        padding: 5px;
+        width: 40px;
+    }
+
+    .mobileTab ul {
+        list-style: none;
+        padding: 0 3px;
+    }
+
+@media only screen and (max-width : 480px) {
+    .mobileTab {
+    }
+}
+/* Small viewport or screen */
+@media only screen and (min-width : 767px) {
+    .mobileTab {
+        display: none;
+    }
+    /*.main-search {
+                margin: 10px 0px 0px 0px !important;
+                padding-bottom: 11px !important;
+            }*/
+}
+/* Medium viewport or screen */
+@media only screen and (min-width : 992px) {
+    .mobileTab {
+        display: none;
+    }
+}
+/* Large viewport or screen */
+@media only screen and (min-width : 1200px) {
+    .mobileTab {
+        display: none;
+    }
+}

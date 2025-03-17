@@ -1,0 +1,23 @@
+
+.login {
+    box-shadow: 2px 2px 11px #636363;
+    margin: 10% 0px 0px 35%;
+    background: #ffffffd9;
+    padding: 30px 100px;
+    width: 35%;
+}
+
+.login-heading {
+    padding: 0px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #2347ad;
+    text-align: center;
+    margin: 0px 0px 11px 0px;
+}
+
+.btn-flat {
+    background: #1065b5;
+    border: none;
+    border-radius: 1px;
+}

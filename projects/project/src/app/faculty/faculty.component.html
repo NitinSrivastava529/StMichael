@@ -1,0 +1,61 @@
+<script src="../../assets/JsModule/OnlineAdmission.js"></script>
+<div class="rs-breadcrumbs bg7 breadcrumbs-overlay">
+    <div class="breadcrumbs-inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="page-title">Faculty Details</h1>
+                    <ul>
+                        <li>
+                            <a class="active" routerLink="/">Home</a>
+                        </li>
+                        <li>Faculty Details</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="rs-history sec-spacer">
+    <div class="container">
+        <div class="row contact_info" style="padding:5px">
+            <div class="col-md-12 col-xs-12">
+                <div class="panel panel-custom">
+                    <div class="panel-heading">Faculty Details</div>
+                    <div class="panel-body" style="padding:5px;overflow: auto;">
+                        <div class="table scroll">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="white-space:nowrap">Sr. No.</th>
+                                        <th style="white-space:nowrap">Faculty Name</th>
+                                        <th style="white-space:nowrap">Designation</th>
+                                        <th style="white-space:nowrap">Qualification</th>
+                                        <th style="white-space:nowrap">DOB</th>
+                                        <th style="white-space:nowrap">DOA</th>
+                                        <th style="white-space:nowrap">Trained/Un-Trained</th>
+                                        <th style="white-space:nowrap">Probation</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let val of facultyList;let i=index">
+                                        <td>{{i+1}}</td>
+                                        <td>{{val.Name}}</td>
+                                        <td>{{val.Designation}}</td>
+                                        <td>{{val.Qualification}}</td>
+                                        <td>{{val.DOB}}</td>
+                                        <td>{{val.DOA}}</td>
+                                        <td>{{val.Trained}}</td>
+                                        <td>{{val.Probation}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

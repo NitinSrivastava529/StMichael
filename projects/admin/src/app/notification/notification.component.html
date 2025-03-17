@@ -1,0 +1,48 @@
+<h2 class="page-heading">Notification Master<hr /></h2>
+<div class="page-box">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Add Notification
+                </div>
+                <div class="panel-body">
+                    <div class="row">                    
+                        <div class="col-md-8 form-group">
+                            <label>Notification <span class="text-danger">*</span></label>
+                          <textarea #notification  class="form-control" placeholder="Notification"></textarea>
+                        </div>                     
+                        <div class="col-md-12 form-group">
+                            <div class="flex">
+                                <h4 class="text-center ws-title pull-left text-danger" style="width:70%;">Notification Record</h4>
+                                <input type="text" class="form-control pull-right" style="width:24%;" placeholder="Search...." id="txtSearch" />
+                                <button class="btn-flat btn-success" id="btnSave" (click)="Save(notification.value)" style="margin-left: 10px;height: 30px;width: 6%;">Save</button>
+                            </div>
+                            <div class="scroll">
+                                <table class="table table-bordered" id="tblNotification">
+                                    <thead>
+                                        <tr>
+                                            <th style="width:1%;">SR.No.</th>
+                                            <th>Notification</th>
+                                            <th>Date</th>
+                                            <th style="width:8%;">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let val of NotificationInfo;let i=index">
+                                            <td>{{i+1}}</td>
+                                            <td>{{val.Notification}}</td>
+                                            <td>{{val.cr_date.substring(0,10)}}</td>
+                                            <td><button (click)="DeleteNotification(val.AutoId)" class="btn btn-danger btn-xs"><i class='fa fa-trash'></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,31 @@
+.direcors h3 {
+    text-align: center;
+    margin: 0;
+    background: #005ba5;
+    font-size: 20px;
+    padding: 10px;
+    color: #fff;
+}
+
+.direcors {
+    margin-top: 5px;
+    width: 90%;
+    text-align: center;
+    padding: 1px;
+    border: 2px solid #005ba5;
+}
+.news{
+    padding-bottom: 10px;
+}
+.news h3{
+    margin: 0;
+    font-size: 18px;
+    color: rgb(168, 18, 18);
+}
+ul.newsList{
+margin: 0;
+}
+ul.newsList li{
+   border-bottom:1px solid #ddd;
+   margin-bottom: 5px;
+}

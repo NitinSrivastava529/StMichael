@@ -1,0 +1,26 @@
+#layout-section {
+    background:url(/Content/data1/images/3.png)
+}
+.btn-float2 {
+    cursor: pointer;
+    z-index: 1;
+    bottom: 0px;
+    right: 18%;
+    position: fixed;
+    float: right;
+    background: #00902c;
+    color: #fff;
+    padding: 0px 16px;
+}
+
+.btn-float {
+    cursor: pointer;
+    z-index: 1;
+    bottom: 0px;
+    right: 1%;
+    position: fixed;
+    float: right;
+    background: #ff0000;
+    color: #fff;
+    padding: 0px 16px;
+}

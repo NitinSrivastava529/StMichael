@@ -1,0 +1,69 @@
+<h2 class="page-heading">Manage Toppers Detail
+    <hr />
+</h2>
+<div class="page-box">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Add News Details
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-3 form-group">
+                            <label>News <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" [(ngModel)]="dataInfo.News"
+                                placeholder="News.." />
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Description<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" placeholder="Class" [(ngModel)]="dataInfo.Description" placeholder="Description.."/>
+                        </div>                                    
+                        <div class="col-md-4 form-group">
+                            <label>Upload File<span class="text-danger">*</span></label>
+                            <div class="flex">
+                                <input type="file" #PhotoUpload (change)="onSelect($event)" [value]="inputFile" class="form-control" />
+                            <button class="btn btn-success btn-sm" (click)="UploadNews()" style="margin-left:8px"><i class="fa fa-sign-in">&nbsp;</i>Save</button>
+                        </div>
+                        </div>                      
+                        <div class="col-md-12 form-group">
+                            <div class="flex">
+                                <h4 class="text-center ws-title pull-left text-danger" style="width:70%;">
+                                    News Info
+                                </h4>
+                                <input type="text" class="form-control pull-right" style="width:24%;"
+                                    placeholder="Search...." id="txtSearch" />
+                            </div>
+                            <div class="scroll">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th style="width:1%;">SR.No.</th>
+                                            <th>News</th>
+                                            <th>Description</th>                                                                                
+                                            <th>Upload Date</th>                                                                                                                                                                                                           
+                                            <th>File</th>                                          
+                                            <th style="width:1%;">CMD</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let val of dataList;let i=index">
+                                            <td>{{i+1}}</td>
+                                            <td>{{val.Heading}}</td>
+                                            <td>{{val.Description}}</td>
+                                            <td>{{val.cr_date}}</td>                                                                                                                                                                                                                                            
+                                            <td><a href="{{baseUrl+'UploadFile/News/'+val.file_path}}" target="_blank" class="btn btn-warning btn-xs">View File</a></td>                                                                          
+                                            <td><button (click)="Delete(val.AutoId )" class="btn btn-danger btn-xs"><i
+                                                        class='fa fa-trash'></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

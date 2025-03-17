@@ -1,0 +1,30 @@
+<div class="rs-breadcrumbs bg7 breadcrumbs-overlay">
+    <div class="breadcrumbs-inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="page-title">Video Gallery</h1>
+                    <ul>
+                        <li>
+                            <a class="active" routerLink="/">Home</a>
+                        </li>
+                        <li>Video Gallery</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Gallery Start -->
+<div class="rs-gallery sec-spacer">
+    <div class="container">
+        <div class="row SiteGallery">
+            <div *ngFor="let data of ipVideo" class="col-lg-4 col-xs-12 col-12">
+                <div class="gallery">
+                    <iframe [src]="getUrl(data.Video)"></iframe>
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

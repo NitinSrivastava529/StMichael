@@ -1,0 +1,27 @@
+<div class="container" *ngIf="isLogin">
+  <app-header></app-header>
+   <div class="row" style="background: #bfbfbf;">
+       <div class="col-md-3">
+           <i class="fa fa-bars toggle-bars" [ngClass]="IsSlide?'hide':'-'" (click)="ToggleSlide()"></i>
+           <div class="menu-section" [ngClass]="IsSlide?'':'hide'">
+               <h3>
+                   Menu Panel<i class="fa fa-bars pull-right ToggleSlide" (click)="ToggleSlide()"></i>
+                   <hr />
+               </h3>
+               <ul id="menu-list">
+                   <li><a routerLink="dashboard">Dashboard</a></li>
+                   <li><a routerLink="photo">Manage Gallery</a></li>                                                                                                                                                                                                                                                                                    
+                   <li><a routerLink="video">Manage Video</a></li>                                                                                                                                                                                                                                                                                    
+                   <li><a routerLink="notification">Manage Notification</a></li>                                                            
+                   <li><a routerLink="teachers-info">Manage Teacher</a></li>                                                   
+                   <li><a routerLink="admission">Manage Admission</a></li>                                                                                                                
+                   <li><a routerLink="news">Manage News</a></li>                                                   
+               </ul>
+           </div>
+       </div>
+       <div [ngClass]="IsSlide?'col-md-9':'col-md-12'" id="layout-section">
+         <router-outlet></router-outlet>
+       </div>
+   </div>       
+ </div>    
+  <app-login *ngIf="!isLogin"></app-login>

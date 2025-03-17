@@ -1,0 +1,44 @@
+<div class="rs-breadcrumbs bg7 breadcrumbs-overlay">
+    <div class="breadcrumbs-inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="page-title">Photo Gallery</h1>
+                    <ul>
+                        <li>
+                            <a class="active" routerLink="/">Home</a>
+                        </li>
+                        <li>Photo Gallery</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Gallery Start -->
+<div class="rs-gallery sec-spacer">
+    <div class="container">
+        <div class="row SiteGallery">       
+            <div *ngFor="let photo of GalleryInfo" class="col-lg-4 col-md-3 col-6">
+                <div class="gallery">
+                    <img data-target="#ModalGallery" data-toggle="modal" (click)="showPhoto(baseUrl+'/UploadFile/Gallery/'+photo.Photo)" class="img-fullwidth" src="{{baseUrl+'/UploadFile/Gallery/'+photo.Photo}}" style="width:100%;">
+                    <div class="image-overlay"></div>                   
+                </div>
+            </div>    
+        </div>
+    </div>
+</div>
+<style>
+    .gallery {
+        box-shadow: 1px 2px 12px #ccc;
+        cursor: pointer !important;
+        margin-bottom: 10px;
+    }
+    </style>
+    <div class="modal fade" id="ModalGallery" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content mc">
+            <img [src]="IsShowImg"/>
+        </div>
+    </div>
+    </div>

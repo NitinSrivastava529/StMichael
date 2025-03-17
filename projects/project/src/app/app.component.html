@@ -1,0 +1,54 @@
+<app-header></app-header>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
+<div class="mobileTab">
+  <ul>
+      <li>
+          <a href="tel:+917068121734">            
+              <img src="../assets/img/call.png" />
+          </a>
+      </li>
+      <li>
+          <a href="#" class="whatsapp">
+              <img src="../assets/img/whatsapp.png" />
+          </a>
+      </li>
+      <li>
+          <a href="mailto:stmichaelsschoolraksa01@gmail.com">
+              <img src="../assets/img/gmail.png" />
+          </a>
+      </li>
+      <li>
+          <a href="sms:+917068121734">
+              <img src="../assets/img/sms.png" />
+          </a>
+      </li>   
+  </ul>
+</div>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $(document).on('click', '.img-fullwidth', function () {
+          var photo = $(this).attr('src');
+          ModalGallery(photo);
+      });
+      $(document).on("click", '.whatsapp', function () {
+          if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+              var sText = "behup";
+              var sUrl = "-";
+              var sMsg = encodeURIComponent(sText) + " - " + encodeURIComponent(sUrl);
+              var Mobile = 917068121734;
+              var whatsapp_url = "whatsapp://send?phone=" + Mobile;
+              //var whatsapp_url = "com.facebook.katana";
+              window.location.href = whatsapp_url;
+          }
+          else {
+              alert("Whatsapp client not available.");
+          }
+      });
+  });
+  function ModalGallery(photo) {
+      $('.mc').empty();
+      $('<img src="' + photo + '" class="img-responsive" />').appendTo($('.mc'));
+      $('#ModalGallery').modal('show');
+  }
+</script>
