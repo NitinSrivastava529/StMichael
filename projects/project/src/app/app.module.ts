@@ -24,6 +24,7 @@ import { ManagementComponent } from './management/management.component';
 import { ChairmanMessageComponent } from './chairman-message/chairman-message.component';
 import { PrincipalDeskComponent } from './principal-desk/principal-desk.component';
 import { OfflineAddmissionComponent } from './offline-addmission/offline-addmission.component';
+import { MpdComponent } from './mpd/mpd.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { OfflineAddmissionComponent } from './offline-addmission/offline-addmiss
     ManagementComponent,
     ChairmanMessageComponent,
     PrincipalDeskComponent,
-    OfflineAddmissionComponent
+    OfflineAddmissionComponent,
+    MpdComponent
   ],
   imports: [
     BrowserModule,

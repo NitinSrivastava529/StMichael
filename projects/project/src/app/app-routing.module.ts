@@ -17,6 +17,7 @@ import { PrincipalDeskComponent } from './principal-desk/principal-desk.componen
 import { ChairmanMessageComponent } from './chairman-message/chairman-message.component';
 import { ManagementComponent } from './management/management.component';
 import { HistoryComponent } from './history/history.component';
+import { MpdComponent } from './mpd/mpd.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -34,6 +35,7 @@ const routes: Routes = [
   {path:'photo-gallery',component:PhotoGalleryComponent},  
   {path:'video',component:VideoComponent},  
   {path:'toppers',component:ToppersComponent},  
+  {path:'mpd',component:MpdComponent},
   {path:'contact',component:ContactUsComponent},
   {path:'**',component:NotFoundComponent}
 ];
