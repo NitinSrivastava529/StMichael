@@ -15,6 +15,7 @@ import { AdmissionComponent } from './admission/admission.component';
 import { VideoComponent } from './video/video.component';
 import { TopperComponent } from './topper/topper.component';
 import { NewsComponent } from './news/news.component';
+import { EventComponent } from './event/event.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { NewsComponent } from './news/news.component';
     TeachersInfoComponent,
     VideoComponent,
     TopperComponent,
-    NewsComponent
+    NewsComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule,

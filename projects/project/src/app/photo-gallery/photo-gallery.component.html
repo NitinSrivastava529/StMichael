@@ -3,10 +3,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h1 class="page-title">Photo Gallery</h1>
+                    <h1 class="page-title">Event Name : {{selectedEvent}}</h1>
                     <ul>
                         <li>
-                            <a class="active" routerLink="/">Home</a>
+                            <a class="active" routerLink="/event-list">Event List</a>
                         </li>
                         <li>Photo Gallery</li>
                     </ul>
@@ -18,13 +18,21 @@
 <!-- Gallery Start -->
 <div class="rs-gallery sec-spacer">
     <div class="container">
-        <div class="row SiteGallery">       
+        <div class="row SiteGallery">
+            <!-- <div class="col-lg-12 col-md-12 col-12">
+               <ul class="event" style="display: inline-flex;gap: 12px;margin-bottom: 20px;">
+                <li (click)="selectedEvent='ALL';GetGallery()">All Event</li>
+                <li *ngFor="let event of EventInfo" (click)="selectedEvent=event.EventName;GetGallery()">{{event.EventName}}</li>
+               </ul>
+            </div> -->
             <div *ngFor="let photo of GalleryInfo" class="col-lg-4 col-md-3 col-6">
                 <div class="gallery">
-                    <img data-target="#ModalGallery" data-toggle="modal" (click)="showPhoto(baseUrl+'/UploadFile/Gallery/'+photo.Photo)" class="img-fullwidth" src="{{baseUrl+'/UploadFile/Gallery/'+photo.Photo}}" style="width:100%;">
-                    <div class="image-overlay"></div>                   
+                    <img data-target="#ModalGallery" data-toggle="modal"
+                        (click)="showPhoto(baseUrl+'/UploadFile/Gallery/'+photo.Photo)" class="img-fullwidth"
+                        src="{{baseUrl+'/UploadFile/Gallery/'+photo.Photo}}" style="width:100%;">
+                    <div class="image-overlay"></div>
                 </div>
-            </div>    
+            </div>
         </div>
     </div>
 </div>
@@ -34,11 +42,11 @@
         cursor: pointer !important;
         margin-bottom: 10px;
     }
-    </style>
-    <div class="modal fade" id="ModalGallery" tabindex="-1" role="dialog">
+</style>
+<div class="modal fade" id="ModalGallery" tabindex="-1" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content mc">
-            <img [src]="IsShowImg"/>
+            <img [src]="IsShowImg" />
         </div>
     </div>
-    </div>
+</div>

@@ -10,6 +10,7 @@ import { TeachersInfoComponent } from './teachers-info/teachers-info.component';
 import { VideoComponent } from './video/video.component';
 import { TopperComponent } from './topper/topper.component';
 import { NewsComponent } from './news/news.component';
+import { EventComponent } from './event/event.component';
 
 const routes: Routes = [
   { path: '',redirectTo:'login',pathMatch:"full" },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'notification', component: NotificationComponent,canActivate:[AuthGuard] },
   { path: 'teachers-info', component: TeachersInfoComponent,canActivate:[AuthGuard] },
   { path: 'topper', component: TopperComponent,canActivate:[AuthGuard] },
+  { path: 'event', component: EventComponent,canActivate:[AuthGuard] },
   { path: 'news', component: NewsComponent,canActivate:[AuthGuard] }
 ];
 

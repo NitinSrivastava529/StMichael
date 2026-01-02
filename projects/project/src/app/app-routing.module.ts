@@ -18,6 +18,7 @@ import { ChairmanMessageComponent } from './chairman-message/chairman-message.co
 import { ManagementComponent } from './management/management.component';
 import { HistoryComponent } from './history/history.component';
 import { MpdComponent } from './mpd/mpd.component';
+import { EventListComponent } from './event-list/event-list.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -37,6 +38,7 @@ const routes: Routes = [
   {path:'toppers',component:ToppersComponent},  
   {path:'mpd',component:MpdComponent},
   {path:'contact',component:ContactUsComponent},
+    {path:'event-list',component:EventListComponent},
   {path:'**',component:NotFoundComponent}
 ];
 

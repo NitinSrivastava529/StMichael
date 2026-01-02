@@ -1,0 +1,48 @@
+<h2 class="page-heading">Event Master
+    <hr />
+</h2>
+<div class="page-box">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Manage Event
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-8 form-group" style="display: flex;">
+                            <label style="white-space: pre;">Event Name <span class="text-danger">*</span> : </label>
+                            <input #event type="text" class="form-control" placeholder="Event Name" />&nbsp;
+                            <button class="btn-flat btn-success" id="btnSave" (click)="Save(event.value)"
+                                style="margin-left: 10px;height: 30px;width: 6%;">Save</button>
+                        </div>                    
+                        <div class="col-md-12 form-group">
+                            <div class="scroll">
+                                <table class="table table-bordered" id="tblNotification">
+                                    <thead>
+                                        <tr>
+                                            <th style="width:1%;">SR.No.</th>
+                                            <th>Event Name</th>
+                                            <th style="width:8%;">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <ng-container *ngFor="let val of EventInfo;let i=index">
+                                        <tr>
+                                            <td>{{i+1}}</td>
+                                            <td>{{val.EventName}}</td>
+                                            <td><button (click)="DeleteEvent(val.AutoId)"
+                                                    class="btn btn-danger btn-xs"><i class='fa fa-trash'></i></button>
+                                            </td>
+                                        </tr>
+                                        </ng-container>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -7,13 +7,17 @@ import { APIService } from '../service/api.service';
   styleUrls: ['./photo-gallery.component.css']
 })
 export class PhotoGalleryComponent implements OnInit {
+  EventInfo: any;
   GalleryInfo: any;
   fileToUpload: any;
   inputFile:any;
+  selectedEvent="-";
+  selectedId=-1;
   baseUrl:string=''; 
   constructor(private config: APIService) { }
 
   ngOnInit(): void {
+   this.GetEvent();
    this.GetGallery();
    this.baseUrl=this.config.baseUrl;
   }
@@ -33,7 +37,20 @@ export class PhotoGalleryComponent implements OnInit {
     this.config.UploadFile(objBO.url,formData).subscribe(data => {
       alert(data);
       this.GetGallery();
+ 
       this.inputFile='';
+    });
+  }
+   GetEvent() {
+    const objBO = {      
+      url: 'api/data/DataQueries',
+      AutoId: 0,
+      from: '1900/01/01',
+      to: '1900/01/01',
+      Logic: 'GetEvent'
+    };
+    this.config.post(objBO).subscribe(data => {
+      this.EventInfo = data.ResultSet.Table;            
     });
   }
   GetGallery() {
@@ -46,6 +63,28 @@ export class PhotoGalleryComponent implements OnInit {
     };
     this.config.post(objBO).subscribe(data => {
       this.GalleryInfo = data.ResultSet.Table;
+    });
+  }
+  setEvent(id:any){
+    this.selectedId=id;
+  }
+  UpdateEvent() {
+    const objBO = {
+      url: 'api/data/InsertUpdateDataInfo',
+      AutoId: this.selectedId,
+      from: '1900/01/01',
+      to: '1900/01/01',
+      Prm1: this.selectedEvent,
+      Logic: 'UpdateEvent'
+    };
+    this.config.post(objBO).subscribe(data => {
+      if (data.includes('Success')) {  
+        alert(data)     
+        this.GetGallery();
+      }
+      else {
+        alert(data);
+      }
     });
   }
   DeleteGallery(id: any) {

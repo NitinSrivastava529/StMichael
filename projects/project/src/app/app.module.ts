@@ -25,6 +25,7 @@ import { ChairmanMessageComponent } from './chairman-message/chairman-message.co
 import { PrincipalDeskComponent } from './principal-desk/principal-desk.component';
 import { OfflineAddmissionComponent } from './offline-addmission/offline-addmission.component';
 import { MpdComponent } from './mpd/mpd.component';
+import { EventListComponent } from './event-list/event-list.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { MpdComponent } from './mpd/mpd.component';
     ChairmanMessageComponent,
     PrincipalDeskComponent,
     OfflineAddmissionComponent,
-    MpdComponent
+    MpdComponent,
+    EventListComponent
   ],
   imports: [
     BrowserModule,
